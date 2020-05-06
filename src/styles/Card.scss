@@ -1,0 +1,161 @@
+@import "./base.scss";
+
+.dragon-card {
+  display: grid;
+  grid-template-columns: 260px;
+  grid-template-rows: 210px 1fr 55px;
+  grid-template-areas: "image" "info" "actions";
+  margin: 8px;
+  border-radius: 18px;
+  border: solid 6px $richBlack;
+  background: $black-gradient;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  justify-self: center;
+  transform: scale3d(1, 1, 1);
+  animation: rise-up 1s ease;
+
+  transition: 0.5s ease;
+  margin: 24px;
+
+  @for $i from 0 through 7 {
+    .card-img-#{$i} {
+      grid-area: image;
+      background-image: url("../assets/imgs/#{$i}.jpg");
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      background-size: cover;
+      padding: 0;
+    }
+  }
+
+  .card-info {
+    grid-area: info;
+    margin: 8px;
+    padding: 8px;
+    align-content: center;
+
+    .dragon-name {
+      font-size: 220%;
+      word-break: break-all;
+      color: $primary;
+      margin: 12px;
+      text-transform: uppercase;
+    }
+
+    .dragon-type {
+      font-size: 100%;
+      color: $secondary;
+      margin: 8px;
+    }
+
+    .dragon-history {
+      font-size: 140%;
+      color: #eeeeee;
+
+      .dragon-creation {
+        font-size: 12px;
+      }
+    }
+
+    .editable-input {
+      width: 80%;
+      border: none;
+      border-bottom: solid 1px $primary;
+      background-color: transparent;
+      color: #fff;
+      text-align: center;
+      margin-top: 8px;
+      font-size: 24px;
+      padding: 8px;
+    }
+  }
+
+  .card-actions {
+    grid-area: actions;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: $primary-gradient;
+    align-content: center;
+
+    .action,
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      color: #fff;
+      padding: 10px;
+      font-size: 24px;
+      background: transparent;
+      border: none;
+
+      &.create {
+        font-size: 32px;
+      }
+    }
+
+    .dragon-creation {
+      align-self: center;
+      font-size: 16px;
+      color: $secondary;
+    }
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .dragon-card {
+    grid-template-columns: 330px;
+    grid-template-rows: 210px 1fr 80px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .dragon-card {
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 1fr 80px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .dragon-card {
+    grid-template-columns: 360px;
+    grid-template-rows: 230px 1fr 90px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .dragon-card {
+    grid-template-columns: 290px;
+    grid-template-rows: 200px 1fr 70px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .dragon-card {
+    grid-template-columns: 300px;
+    grid-template-rows: 200px 1fr 80px;
+    margin-bottom: 48px;
+
+    &:hover {
+      transform: scale3d(1.01, 1.01, 1.01);
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .card-info {
+      padding: 16px;
+    }
+
+    .card-actions {
+      .dragon-creation {
+        font-size: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "./base.scss";
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 380px;
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  background: $richBlack;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+
+  .logo {
+    a {
+      font-size: 5vh;
+      margin-left: 16px;
+      padding: 8px;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 8px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin: 8px;
+      padding: 8px;
+    }
+  }
+}

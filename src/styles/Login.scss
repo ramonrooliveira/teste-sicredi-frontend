@@ -1,0 +1,85 @@
+@import "./base.scss";
+
+.login-form-wrapper {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: $richBlack;
+  border-radius: 0px 0 24px 24px;
+
+  .fire {
+    font-size: 6vh;
+  }
+
+  h1.title {
+    color: #fff;
+    font-family: Biko;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8vh;
+  }
+
+  form {
+    .login-input-wrapper {
+      input.credentials {
+        flex: 1;
+        max-width: 80%;
+        margin: 16px;
+        text-align: center;
+        padding: 8px;
+
+        color: #fff;
+        font-size: 4vh;
+        background: $richBlack;
+        outline: none;
+        border: none;
+        border-bottom: solid 1px #fff;
+      }
+
+      button.login {
+        max-width: 80%;
+        margin-top: 16px;
+        padding: 8px 64px;
+        background: $richBlack;
+        font-size: 24px;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 48px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.large-logo {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12vh;
+}
+
+@media screen and (min-width: 1200px) {
+  .login-form-wrapper {
+    position: absolute;
+    width: 45vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    padding: 0px;
+    border-radius: 0px 24px 24px 0px;
+  }
+
+  .large-logo {
+    position: absolute;
+    width: 58vw;
+    height: 100vh;
+    left: 42vw;
+    font-size: 12vw;
+  }
+}
