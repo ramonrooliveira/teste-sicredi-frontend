@@ -8,11 +8,11 @@ Created with React.
 
 First install the dependencies by running
 
-####`npm i`
+`npm i`
 
 and then, you can run the app with
 
-####`npm start`
+`npm start`
 
 and the dev server will be accessible at [localhost:3000/login](http://localhost:3000/login).
 
