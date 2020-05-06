@@ -44,7 +44,7 @@ function App() {
       onUpdate={() => window.scrollTo(0, 0)}
     >
       <Switch>
-        <Route path={["/", "/login"]} component={Login} />
+        <Route exact path={["/", "/login"]} component={Login} />
         <PrivateRoute path="/list" component={List} />
         <PrivateRoute path="/info/:id" component={Info} />
         <PrivateRoute path="/create" component={Create} />
